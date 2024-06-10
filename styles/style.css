@@ -1,10 +1,11 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  color: var(--main-text-color);
   font-family: var(--main-font);
   font-weight: 400;
-  color: var(--main-text-color);
   font-size: 18px;
+  background-color: var(--bg-color);
   background-image: var(--bg-cover);
   background-position: center;
   background-size: cover;
@@ -15,7 +16,7 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 2fr 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   width: 100%;
   height: 100vh;
   margin-bottom: 60px;
@@ -29,8 +30,8 @@
     left: 20px;
     width: 25px;
     height: 25px;
-    border-bottom: 1px solid var(--main-text-color);
-    border-left: 1px solid var(--main-text-color);
+    border-bottom: 1px solid var(--decorative-icon-color);
+    border-left: 1px solid var(--decorative-icon-color);
   }
 
   &::after {
@@ -40,25 +41,26 @@
     right: 20px;
     width: 25px;
     height: 25px;
-    border-top: 1px solid var(--main-text-color);
-    border-right: 1px solid var(--main-text-color);
+    border-top: 1px solid var(--decorative-icon-color);
+    border-right: 1px solid var(--decorative-icon-color);
   }
 }
 
 .header__theme-menu {
   justify-self: center;
+  color: var(--main-title);
+  padding-top: 20px;
 }
 
 .header__theme-menu-list {
   display: flex;
   gap: 10px;
-  padding-top: 20px;
 }
 
 .header__theme-menu-list-item {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .header__theme-menu-button {
@@ -97,15 +99,40 @@
 
 .header__description {
   justify-self: end;
-  align-self: flex-end;
+  align-self: start;
+  margin-top: 48px;
   width: calc(50% - 20px);
   margin-right: 20px;
+  color: var(--card-title);
   font-weight: 700;
   line-height: 1.3;
 }
 
 .title-decor {
   background-color: var(--accent-color);
+}
+
+.decorative-icon {
+  display: none;
+  text-transform: uppercase;
+  position: absolute;
+  color: var(--main-title);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.38;
+  text-align: center;
+  top: 20px;
+  right: 22px;
+
+  &::after {
+    content: '';
+    background-image: url('../images/decorative-ellipse.svg');
+    width: 23px;
+    height: 23px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+  }
 }
 
 .main-content {
@@ -123,10 +150,10 @@
 }
 
 .title {
+  color: var(--main-title);
   font-weight: 700;
   font-size: 18px;
   line-height: 1.3;
-  color: var(--main-title);
 }
 
 .card-container {
@@ -175,19 +202,21 @@
   gap: 20px;
 }
 
-.section-three-columns .card {
+.section-three-columns-container {
+  display: grid;
+  grid-column: 1 / -1;
   grid-row: 2;
+  grid-template-columns: subgrid;
 }
 
-.title-regular {
+.weight-regular {
   font-weight: 400;
-  line-height: 1.3;
-  font-size: 18px;
-  color: var(--card-title);
 }
 
-.gallery .title {
-  margin-bottom: 20px;
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .gallery-container {
@@ -249,4 +278,97 @@
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   line-height: 0.825;
   text-shadow: 2px 2px 1px var(--shadow-color);
+}
+
+@media (max-width: 768px) {
+  .header__theme-menu {
+    justify-self: end;
+    align-self: end;
+    padding: 0 20px 50px 0;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .header__title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+
+  .section-three-columns-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    margin-bottom: 40px;
+  }
+
+  .header__theme-menu {
+    padding-right: 10px;
+  }
+
+  .header__title {
+    padding: 0 10px;
+  }
+
+  .header__description {
+    width: calc(100% - 20px);
+    margin: 40px 10px 0;
+  }
+
+  .decorative-border {
+    &::before {
+      bottom: 10px;
+      left: 10px;
+    }
+
+    &::after {
+      top: 10px;
+      right: 10px;
+    }
+  }
+
+  .decorative-icon {
+    top: 10px;
+    right: 12px;
+  }
+
+  .main-content {
+    padding: 0 10px;
+  }
+
+  .main-content section:not(:last-of-type) {
+    margin-bottom: 50px;
+  }
+
+  .section-two-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .section-three-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    gap: 10px;
+  }
+
+  .gallery-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .gallery__img {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .footer {
+    margin-top: 40px;
+  }
 }

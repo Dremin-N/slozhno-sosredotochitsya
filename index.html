@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="./styles/dark.css" />
   </head>
   <body class="page">
-    <header class="header decorated-zone decorative-border">
+    <header class="header decorative-border">
       <nav class="header__theme-menu">
         <ul class="header__theme-menu-list">
           <li class="header__theme-menu-item">
@@ -56,13 +56,14 @@
           очень надо
         </p>
       </div>
+      <span class="decorative-icon">rec</span>
     </header>
     <main class="main-content">
       <section class="section-two-columns">
         <h2 class="title">Почему сосредоточиться так сложно</h2>
         <div class="card-container">
           <article class="card">
-            <h3 class="title title-decor">Многозадачность</h3>
+            <h3 class="card__title title-decor">Многозадачность</h3>
             <p class="card__text">
               Особенно сложно сосредоточиться, когда задач много и все они —
               важные. Где же легендарная многозадачность, когда она так нужна
@@ -80,7 +81,7 @@
             </p>
           </article>
           <article class="card">
-            <h3 class="title title-decor">Дофамин</h3>
+            <h3 class="card__title title-decor">Дофамин</h3>
             <p class="card__text">
               С гормонами стресса всё понятно, но дальше — ещё интереснее. В
               нашей невозможности сосредоточиться замешана и полная
@@ -96,40 +97,42 @@
       </section>
       <section class="section-three-columns">
         <h2 class="title">Что снижает концентрацию внимания?</h2>
-        <article class="card">
-          <h3 class="title title-decor">Многозадачность</h3>
-          <p class="card__text">
-            Как концентрация может снижаться из-за… концентрации? Любая
-            стрессовая ситуация (и резко меняющийся мир в целом) заставляет наш
-            мозг постоянно «сканировать» окружающую среду на предмет опасности.
-            Например, читать новости вместо работы. Но быть собранными всё время
-            — невозможно. Концентрация — мышца, и она может не выдержать, если
-            не давать ей отдохнуть.
-          </p>
-        </article>
-        <article class="card">
-          <h3 class="title title-decor">Еда</h3>
-          <p class="card__text">
-            «Быстрые углеводы» — сахар, белый хлеб, сладости — молниеносно
-            доставляют в мозг энергию и помогают ему лучше работать. Но уходит
-            эта энергия также быстро, как и приходит. А мы в результате попадаем
-            на «углеводные качели»: как только действие «быстрых углеводов»
-            заканчивается, мы чувствуем усталость и сонливость. И хотим ещё
-            больше быстрых углеводов.
-          </p>
-        </article>
-        <article class="card">
-          <h3 class="title title-decor">Гаджеты</h3>
-          <p class="card__text">
-            Да-да, это та самая ситуация, когда на экране ноутбука — код, в
-            наушниках — подкаст, а на компьютере фоном — ещё и видео с забавными
-            утятами. В результате мозг пытается переключиться с одной задачи на
-            другую — и просто не может. А чтобы вернуться к состоянию полной
-            концентрации, человеку в среднем нужно 20 минут. Вот и получается,
-            что чем больше времени мы проводим в гаджетах, тем больше времени
-            затем нужно, чтобы вернуться к работе.
-          </p>
-        </article>
+        <div class="section-three-columns-container">
+          <article class="card">
+            <h3 class="card__title title-decor">Многозадачность</h3>
+            <p class="card__text">
+              Как концентрация может снижаться из-за… концентрации? Любая
+              стрессовая ситуация (и резко меняющийся мир в целом) заставляет
+              наш мозг постоянно «сканировать» окружающую среду на предмет
+              опасности. Например, читать новости вместо работы. Но быть
+              собранными всё время — невозможно. Концентрация — мышца, и она
+              может не выдержать, если не давать ей отдохнуть.
+            </p>
+          </article>
+          <article class="card">
+            <h3 class="card__title title-decor">Еда</h3>
+            <p class="card__text">
+              «Быстрые углеводы» — сахар, белый хлеб, сладости — молниеносно
+              доставляют в мозг энергию и помогают ему лучше работать. Но уходит
+              эта энергия также быстро, как и приходит. А мы в результате
+              попадаем на «углеводные качели»: как только действие «быстрых
+              углеводов» заканчивается, мы чувствуем усталость и сонливость. И
+              хотим ещё больше быстрых углеводов.
+            </p>
+          </article>
+          <article class="card">
+            <h3 class="card__title title-decor">Гаджеты</h3>
+            <p class="card__text">
+              Да-да, это та самая ситуация, когда на экране ноутбука — код, в
+              наушниках — подкаст, а на компьютере фоном — ещё и видео с
+              забавными утятами. В результате мозг пытается переключиться с
+              одной задачи на другую — и просто не может. А чтобы вернуться к
+              состоянию полной концентрации, человеку в среднем нужно 20 минут.
+              Вот и получается, что чем больше времени мы проводим в гаджетах,
+              тем больше времени затем нужно, чтобы вернуться к работе.
+            </p>
+          </article>
+        </div>
       </section>
       <section class="section-two-columns">
         <h2 class="title">
@@ -137,11 +140,13 @@
           секунд)
         </h2>
         <div class="card-container">
-          <h3 class="title title-decor">
+          <h3 class="card__title title-decor">
             5 простых (на самом деле не очень) советов
           </h3>
           <article class="card">
-            <h3 class="title-regular title-decor">Представьте небо и облака</h3>
+            <h3 class="weight-regular card__title title-decor">
+              Представьте небо и облака
+            </h3>
             <p class="card__text">
               Или листья в ручье. Тут дело в лёгкой медитации, которая помогает
               успокоиться. Ведь часто именно тревожные мысли о сложных задачах
@@ -154,7 +159,9 @@
             </p>
           </article>
           <article class="card">
-            <h3 class="title-regular title-decor">Включите музыку</h3>
+            <h3 class="weight-regular card__title title-decor">
+              Включите музыку
+            </h3>
             <p class="card__text">
               Но не любую, и не любимую. Любимая может быть связана с сильными
               положительными эмоциями, которые тоже очень сильно отвлекают.
@@ -163,7 +170,7 @@
             </p>
           </article>
           <article class="card">
-            <h3 class="title-regular title-decor">Прогуляйтесь</h3>
+            <h3 class="weight-regular card__title title-decor">Прогуляйтесь</h3>
             <p class="card__text">
               Или даже пробегитесь. Лучше найти парк или лес: один эксперимент
               <a
@@ -178,7 +185,7 @@
             </p>
           </article>
           <article class="card">
-            <h3 class="title-regular title-decor">Хорошо ешьте</h3>
+            <h3 class="weight-regular card__title title-decor">Хорошо ешьте</h3>
             <p class="card__text">
               Мы — не ваша бабушка, но это правда важно. Выбирайте продукты,
               которые препятствуют резким скачкам сахара в крови. Например, с
@@ -187,7 +194,7 @@
             </p>
           </article>
           <article class="card">
-            <h3 class="title-regular title-decor">Читайте</h3>
+            <h3 class="weight-regular card__title title-decor">Читайте</h3>
             <p class="card__text">
               Настоящие бумажные книги. Это правда помогает с концентрацией:
               чтобы прочитать пост в соцсети, достаточно нескольких минут или
@@ -198,7 +205,7 @@
         </div>
       </section>
       <section class="gallery">
-        <h3 class="title title-decor">А можно в картинках?</h3>
+        <h3 class="card__title title-decor">А можно в картинках?</h3>
         <div class="gallery-container">
           <picture class="gallery__item-1">
             <source srcset="./images/sunset.webp" type="image/webp" />
