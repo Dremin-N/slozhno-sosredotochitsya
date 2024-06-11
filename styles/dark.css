@@ -1,6 +1,6 @@
 :root .theme_dark {
   --bg-color: #000028;
-  --bg-cover: url('../images/cover-image-dark.png');
+  --bg-cover: url(../images/cover-image-dark.png);
   --accent-color: #ff0070;
   --title-color: #db00ff;
   --main-title: #ff0070;
@@ -8,18 +8,19 @@
   --card-title: #000028;
   --main-text-color: #f1b2ce;
   --main-font: 'IBM Plex mono', serif;
-  --hover-button: rgba(255, 0, 112, 0.4);
+  --hover-button: rgba(255 0 112 / 0.4);
   --decorative-icon-color: #ff0070;
 }
 
 .page.theme_dark .decorative-icon {
-  display: block;
+  display: inline-block;
 }
 
 @media (prefers-color-scheme: dark) {
+
   :root {
-    --bg-color: #fff1f7;
-    --bg-cover: url('../images/cover-image-dark.png');
+    --bg-color: #000028;
+    --bg-cover: url(../images/cover-image-dark.png);
     --accent-color: #ff0070;
     --title-color: #db00ff;
     --main-title: #ff0070;
@@ -27,7 +28,7 @@
     --card-title: #000028;
     --main-text-color: #f1b2ce;
     --main-font: 'IBM Plex mono', serif;
-    --hover-button: rgba(255, 0, 112, 0.4);
+    --hover-button: rgba(255 0 112 / 0.4);
     --decorative-icon-color: #ff0070;
   }
 

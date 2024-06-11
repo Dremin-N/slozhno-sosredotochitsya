@@ -56,7 +56,7 @@
           очень надо
         </p>
       </div>
-      <span class="decorative-icon">rec</span>
+      <span class="decorative-icon"></span>
     </header>
     <main class="main-content">
       <section class="section-two-columns">
@@ -71,7 +71,8 @@
               её просто не существует. Исследователи
               <a
                 href="https://dana.org/article/multicosts-of-multitasking/"
-                class="decorated-link"
+                class="decorated-link" 
+                target="_blank"
                 >выяснили</a
               >, что мозгу тяжело концентрироваться даже на двух делах
               одновременно. А когда в поле внимания попадает несколько важных
@@ -95,9 +96,16 @@
           </article>
         </div>
       </section>
+      <!-- Извиняюсь за комментарий, хотел бы уточнить, 
+      а какие в данном случае лучше давать имена секциям. 
+      Если использовать привязку к количеству колонок, 
+      то при добавлении похожих секций можно переиспользовать эти классы с разметкой
+      и не писать дополнительные стили. А если давать секциям 
+      название класса от Title (например, section-who или section-what),
+      то придется для новой секции писать стили по новой-->
       <section class="section-three-columns">
         <h2 class="title">Что снижает концентрацию внимания?</h2>
-        <div class="section-three-columns-container">
+        <div class="card-container">
           <article class="card">
             <h3 class="card__title title-decor">Многозадачность</h3>
             <p class="card__text">
@@ -176,6 +184,7 @@
               <a
                 href="https://www.sciencedirect.com/science/article/abs/pii/S0272494415000328"
                 class="decorated-link"
+                target="_blank"
                 >показал</a
               >, что созерцание природы повышает концентрацию, в то время как
               после просмотра городских пейзажей она наоборот понижается. Можно

@@ -1,5 +1,6 @@
 :root {
   --bg-color: #fff1f7;
+  --logo-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   --bg-cover: url(../images/cover-image-light.png);
   --accent-color: #ff8dcb;
   --main-title: #353430;
@@ -7,7 +8,7 @@
   --title-color: #ffc2e6;
   --shadow-color: #ff0070;
   --main-text-color: #353430;
-  --main-font: 'IBM Plex mono', serif;
+  --main-font: 'IBM Plex mono', monospace;
   --hover-button: rgba(50 49 45 / 0.4);
   --decorative-icon-color: #353430;
 }
